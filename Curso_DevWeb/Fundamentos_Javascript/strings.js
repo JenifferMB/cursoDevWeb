@@ -13,4 +13,4 @@ console.log(phrase.substring(0,4)) //read the sentence from one position to the 
 console.log("Concatena ".concat(phrase).concat(" isso aqui"))
 console.log(phrase.replace("e",3)) //replace original letter in the phrase to other character
 
-console.log("one, two, three, four".split(",")) //transform the sentence into an array
+console.log("one, two, three, four".split(",")) //transform the sentence into an array //
