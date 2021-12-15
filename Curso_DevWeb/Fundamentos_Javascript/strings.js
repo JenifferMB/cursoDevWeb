@@ -1,3 +1,5 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 const phrase = "Leia isso aqui"
 
 console.log(phrase.charAt(3)) //find the current letter, position = letter - 1
@@ -14,3 +16,20 @@ console.log("Concatena ".concat(phrase).concat(" isso aqui"))
 console.log(phrase.replace("e",3)) //replace original letter in the phrase to other character
 
 console.log("one, two, three, four".split(",")) //transform the sentence into an array //
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const name1 = 'Jeniffer'
+const sentence = "Ola " +name1 + " !"
+const template = 
+`
+    Ola
+    ${name1}!`
+
+console.log(sentence, template)
+
+//expressions 
+console.log(`1 + 1 = ${1 + 1}`)
+
+const up = text => text.toUpperCase()
+console.log(`uppercase: ${up("Another phrase")}`)
