@@ -14,4 +14,12 @@ console.log(typeof grade1, typeof grade2)
 
 console.log(10/0) //infinite
 console.log("50.5" /2) //accept
+console.log('4' + 2) //concat "+"
 console.log(0.1 + 0.7) //imprecise
+
+const radius = 7.7
+const area = Math.PI * Math.pow(radius,2)
+
+console.log(area)
+console.log(typeof Math) //object
+
