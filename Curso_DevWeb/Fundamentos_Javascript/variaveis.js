@@ -20,3 +20,29 @@ number
 value
 name
 */
+
+
+{{{{{var test1 = "test"}}}}} //global
+
+console.log(test)
+
+function test(){
+    var local = 123
+    console.log(local)
+}
+
+//console.log(local) = error
+
+var numberTest = 1
+
+{
+    let numberTest = 2
+    console.log("inside = " +numberTest)
+}
+
+
+console.log("outside = " +numberTest)
+
+
+//var = global escope and function
+//let = global escope, function e block.
