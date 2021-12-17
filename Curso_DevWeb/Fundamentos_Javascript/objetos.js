@@ -14,3 +14,24 @@ const obj2 =
 }
 
 console.log(obj2)
+
+
+
+console.log(typeof Object)
+console.log(typeof new Object)
+class classe{}
+console.log(typeof classe)
+
+
+
+const costumer = {
+    name: "Sofia",
+    age: 10,
+    height: 90,
+    address: {
+        street: "Terra do Sao Nunca",
+        n: 666
+    }
+}
+
+console.log(costumer)
