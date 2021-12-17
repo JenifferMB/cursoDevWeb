@@ -15,4 +15,4 @@ function shout(obj){
 }
 
 const obj = {name: 44}
-shout(obj)
+shout(obj) //
