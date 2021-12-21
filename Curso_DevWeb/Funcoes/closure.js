@@ -13,4 +13,3 @@ function outside(){
 
 const fun = outside()
 console.log(fun())
-
