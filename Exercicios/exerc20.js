@@ -4,3 +4,17 @@ Seu programa deve mostrar apenas as notas utilizadas. Por exemplo, ao solicitar 
 informar apenas a seguinte informação (note que não foram exibidas informações sobre as demais cédulas): 1
 nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.*/
 
+function money(money){   
+    let n = [100, 50, 20, 10, 5, 1]
+    let print = ""
+
+    for(let i = 0; i < n.length; i++){
+		if(money >= n[i] ){
+				print += Math.floor(money/n[i]) + " banknotes of " + n[i] + " R$ | "
+				money = money % n[i];
+		}
+	}
+    return print
+}
+
+console.log(money(997))
