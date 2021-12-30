@@ -7,7 +7,7 @@ console.log(obj)
 //game -> 456 -> {...}
 //obj = {game: "Fatal Frame"} //error
 
-Object.freeze(obj)
+Object.freeze(obj) //freeze obj
 
 obj.game = "The Sims"
 obj.id = 1
