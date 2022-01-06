@@ -2,7 +2,7 @@
 função) e com ponto de exclamação "!" no final. */
 
 function hello(text){
-    let greetings = "Hello "
+    let greetings = "Hello, "
     return greetings.concat(text)
 }
 
