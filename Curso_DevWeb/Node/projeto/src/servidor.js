@@ -3,6 +3,9 @@ const port = 3003
 const express = require('express')
 const app = express()
 const bd = require('./bancoDeDados')
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({extended: true}))
 
 app.get('/products', (req, res, next) => {
     res.send(bd.getProds())
