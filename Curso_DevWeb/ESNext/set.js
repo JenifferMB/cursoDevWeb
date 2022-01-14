@@ -1,0 +1,12 @@
+const capitals = new Set()
+capitals.add("Porto Alegre")
+capitals.add("São Paulo")
+capitals.add("Salvador")
+capitals.add("Curitiba")
+capitals.add("Porto Alegre")
+
+console.log(capitals)
+console.log(capitals.size)
+console.log(capitals.has("porto alegre"), capitals.has("Porto Alegre"))
+capitals.delete("Curitiba")
+console.log(capitals.has("Curitiba"))
