@@ -1,10 +1,11 @@
-<div slider>
+<div slider class="effect">
 <p>
-    <img src="https://cdn.pixabay.com/photo/2021/07/06/14/38/border-collie-6391794_960_720.jpg" alt="Cachorro" />
+    <img src="https://cdn.pixabay.com/photo/2021/08/06/05/02/birds-6525352_960_720.jpg" alt="Pássaros">
+    
 </p>
 
 <p>
-    <img src="https://cdn.pixabay.com/photo/2021/08/06/05/02/birds-6525352_960_720.jpg" alt="Pássaros">
+    <img src="https://cdn.pixabay.com/photo/2021/07/06/14/38/border-collie-6391794_960_720.jpg" alt="Cachorro" />
 </p>
 
 <p>
@@ -19,10 +20,9 @@
         display: none;
     }
 
-    .slider img {
+    .effect img {
     width: 100%;
     height: auto;
-
 }
 
 </style>
@@ -30,20 +30,21 @@
 <script>
     function move(elem, begin, end, step, callback){
         const newBegin = begin - step
+        const transitionTime = 7
         if(newBegin >= end){
             elem.style.left = newBegin + 'px'
-            setTimeout(() => move(elem, newBegin, end, step, callback), 7)
+            setTimeout(() => move(elem, newBegin, end, step, callback), transitionTime)
         } 
         else{
             callback()
         }
     }
 
-    const p = document.querySelector('[slider] > p')
+    /*const p = document.querySelector('[slider] > p')
     p.style.display = 'block'
     move(p, 1500, -400, 5, () =>{
-        console.log("moveu")
-    })
+        console.log("moved")
+    })*/
 
     function slider(){
         const elements = document.querySelectorAll('[slider] > p')
@@ -57,10 +58,10 @@
         const begin = innerWidth
         const end = -slide.clientWidth
 
-        slide.style.left = `${slide}px`
+        slide.style.left = `${begin}px`
 
         move(slide, begin, end, 5, () => {
-            slide.style.display = 'nome'
+            slide.style.display = 'none'
             showSlides(slides, getNext(slides, slide))
         })
     }
