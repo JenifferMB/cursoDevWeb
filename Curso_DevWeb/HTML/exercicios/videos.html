@@ -1,0 +1,64 @@
+<!--controls autoplay controlsList="nodownload"--> 
+<video id="video" width="800" height="450">
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+    Seu browser não suporta a tag de vídeo.
+</video>
+
+<div progress="video" class="course">
+    <div></div>
+</div>
+
+<div>
+    <button play="video">Play</button>
+    <button pause="video">Pause</button>
+</div>
+
+<style>
+    .course {
+        height: 20px;
+        width: 500px;
+        border: solid 1px #444;
+        margin: 20px;
+    }
+
+    .course > div{
+        background-color: red;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+
+</style>
+
+<script>
+
+/*var vid = document.getElementById("video");
+
+function playVideo() {
+    vid.play();
+}
+
+function pauseVideo() {
+    vid.pause();
+}*/
+
+function configVideo(id) {
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+
+        document.querySelector(`[play=${id}]`).onclick = e => video.play()
+        document.querySelector(`[pause=${id}]`).onclick = e => video.pause()
+
+        setInterval(() => {
+            const perc = (video.currentTime / video.duration) * 100
+            const valueDiv = document.querySelector(`[progress=${id}] > div`)
+            valueDiv.style.width = `${perc}%`
+            valueDiv.innerHTML = `${perc.toFixed(1)}%`
+        }, 500)
+    }
+
+    configVideo('video')
+
+</script>
